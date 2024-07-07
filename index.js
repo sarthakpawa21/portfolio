@@ -27,7 +27,7 @@ app.get("/contact",(req,res)=>{
 app.get("/projects",(req,res)=>{
 
     var data = JSON.parse(projectsData);
-    console.log(data) ;
+//    console.log(data) ;
     res.render("projects.ejs",{projects:data});
 })
 

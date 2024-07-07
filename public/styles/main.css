@@ -7,18 +7,24 @@
     flex-wrap: wrap;
     border: 2px solid gray;
     padding: 25px;
+    flex-basis: 80px;
     align-items: center;
     justify-content: space-evenly;
     margin: -10px;
 
 }
 .nav-button{
-    /* background-color: blue; */
+    text-align: center;
     border: 2px solid gray;
     padding: 10px;
-    min-width: 20%;
-    height: 300px;
+    min-width: 10%;
+    height: 30px;
+}
 
+
+.nav-button a{
+    text-decoration: none; 
+    
 }
 .banner{
     border: 2px solid gray;
@@ -30,39 +36,44 @@
 
 
 .projects-grid{
+    background-color: red;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
+    grid-template-columns:  repeat(3, 1fr);
+    justify-content: center;
     align-items: center;
-    justify-items: center;
+    gap: 10px;
+    padding: 20px;
     border: 2px solid gray;
 
 }
 .card{
-    height: 400px;
-    width: 300px ;
+
+    display: inline-block;
+    position: relative;
+    height:95%;
+    width: 99% ;
+    aspect-ratio: 1;
     border: 2px solid gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     background-color: transparent;
     perspective: 1000px;
-}
+ }
+
 .card-inner{
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style:preserve-3d;     
+    transition: transform 0.5s;
+    transform-style:preserve-3d;    
 }
 
-.card:hover .card-inner{
+.card:hover .card-inner:hover {   /* */
     transform: rotateY(180deg);
 }
 .card img{
+    height : 70% ;
+    width: 80% ;
     border: 2px solid red;
 }
 
@@ -77,7 +88,7 @@
     color: black;
   }
   .card-back {
-    background-color: #360303;
+    background-color: #526868;
     color: black;
     transform: rotateY(180deg);
   }
@@ -146,4 +157,11 @@
 
     
 }
+
+@media (max-width:1000px){
+    .projects-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
