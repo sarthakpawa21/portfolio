@@ -1,6 +1,7 @@
 import  express from "express" ;  
 import bodyParser from "body-parser";
 import fs from "fs" ;
+import appendFile from "fs" ;
 
 var projectsData = fs.readFileSync('public/data/projects.json') ;
 
@@ -24,10 +25,20 @@ app.get("/about",(req,res)=>{
 app.get("/contact",(req,res)=>{
     res.render("contact.ejs",{});
 })
+
+app.post("/send",(req,res)=>{
+    console.log(req.body);
+    var responsesData = fs.readFileSync('responses.json') ;
+    var data = JSON.parse(responsesData) ; 
+    data.push(req.body);
+    var toWrite = JSON.stringify(data);
+    fs.writeFile("responses.json",toWrite,(err) => {}); 
+    res.redirect("/contact");
+});
+
 app.get("/projects",(req,res)=>{
 
     var data = JSON.parse(projectsData);
-//    console.log(data) ;
     res.render("projects.ejs",{projects:data});
 })
 
