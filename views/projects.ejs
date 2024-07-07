@@ -6,6 +6,7 @@
         <h2>Some of the things I have worked on</h2>
     </div>
     
+    <div class="contents">
     <div class="projects-grid">
         <% for (var i = 0; i < projects.length; i++) { %>
             <div class="card flex-item">
@@ -15,11 +16,12 @@
                         <h3><%= projects[i].name %></h3>
                     </div>
                     <div class="card-back"> 
-                        <h3>Tech stack used: <%= projects[i].tech %></h3>
+                        <h4>Tech stack used: <br><%= projects[i].tech %></h4>
                         <p><%= projects[i].description %></p>
                     </div>
                 </div>
             </div>
         <% } %>
+    </div>
     </div>
 </div>

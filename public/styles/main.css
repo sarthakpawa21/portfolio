@@ -1,3 +1,23 @@
+/* dark-gray-blue #222831
+gray-blue #2D4059
+orange #FF5722
+white #EEEEEE
+ */
+
+.bg-db{
+    background-color: #222831;
+}
+
+body{
+    font-family: "Roboto", sans-serif; 
+    background-color: #526868;
+}
+.navbar{
+    overflow: hidden;
+    margin: -10px;
+    width: 101.5%;
+    color:#EEEEEE;
+}
 
 .nav-item-list{
     list-style: none;
@@ -5,7 +25,7 @@
     flex-direction: row;
     gap: 30px;
     flex-wrap: wrap;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 25px;
     flex-basis: 80px;
     align-items: center;
@@ -15,51 +35,64 @@
 }
 .nav-button{
     text-align: center;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 10px;
     min-width: 10%;
     height: 30px;
+}
+.nav-button:hover a{
+    color: #FF5722;
 }
 
 
 .nav-button a{
     text-decoration: none; 
+    color: #EEEEEE;
+    font-size: x-large;
+    font-weight: 400;
+
     
 }
-.banner{
-    border: 2px solid gray;
-    padding: auto;
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
 
 .projects-grid{
-    background-color: red;
+    background-color: #222831;
     display: grid;
     grid-template-columns:  repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     padding: 20px;
-    border: 2px solid gray;
+  
 
 }
-.card{
+h3{
+    color: #EEEEEE;
+}
+.card-back p{
+    color: #222831;
+    padding: 20px;
 
+}
+h4{
+   color: #EEEEEE;
+   padding-top: 20px;
+   font-size: 150%;
+}
+.card{
+    border-radius: 30px;
     display: inline-block;
     position: relative;
     height:95%;
     width: 99% ;
     aspect-ratio: 1;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     text-align: center;
     background-color: transparent;
     perspective: 1000px;
  }
 
 .card-inner{
+    border-radius: 30px;
     position: relative;
     width: 100%;
     height: 100%;
@@ -72,32 +105,48 @@
     transform: rotateY(180deg);
 }
 .card img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
     height : 70% ;
-    width: 80% ;
-    border: 2px solid red;
+    width: 100% ;
+    /* border: 2px solid red; */
 }
 
 .card-front, .card-back {
+    border-radius: 30px;
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
   }
   .card-front {
-    background-color: #eeacac;
-    color: black;
+    background-color: #222831;
+    /* border: 10px solid #FF5722; */
+    background-color: #FF5722;
+   
   }
   .card-back {
-    background-color: #526868;
+    background-color: #FF5722 ; 
     color: black;
     transform: rotateY(180deg);
+
   }
+
+  .banner{
+    /* border: 2px solid gray; */
+    padding: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
 
 
 .profile-img{
     
     padding: 20px;
-    border: 2px solid gray;
+    /* border: 2px solid blue; */
+    background-color: #222831;
     min-width: 33%;
     height: 100%;
     display: inline-block;
@@ -106,31 +155,119 @@
     overflow: hidden ;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
+
     
 }
 #profile{
-    border: 2px solid gray;
+    margin: 10px;
+    border: 20px solid #FF5722;
     border-radius: 50%;
     height: 100%;
-    width: 100%;
+    width: 90%;
     display: block;
+
 }
 
 .intro{
-    text-align: center;
+    overflow: hidden;
+    flex-grow: 1;
+    text-align: left;
     padding: 20px;
-    border: 2px solid gray;
     min-width: 50%;
     text-wrap: wrap;
     align-content: center;
+    background-color: #222831;
+   font-size: x-large;
+    margin-right: -110px;
 
+}
+h1{
+    display: inline;
+    color: #FF5722;
+    font-size: 300%;
+    /* border: 2px solid wheat; */
+    
+}
+h2{
+    text-wrap: wrap;
+    color: #EEEEEE;
+    /* border: 2px solid wheat; */
+    width: 70%;
+ 
 }
 
 .main{
     margin: 100px;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
 }
 
+.contents{
+    margin-top: 50px;
+    /* border: 2px solid red; */
+    color: #EEEEEE;
+    font-size: x-large;
+    padding: 50px;
+    background-color: #222831;
+    padding-left: 200px;
+    margin-left: -150px;
+    margin-right: 50px;
+    border-radius: 50px;
+}
+
+
+.top-banner{
+    /* border: 2px solid wheat; */
+    display: flex;
+    flex-direction: column;
+    background-color: #222831;
+    padding: 30px;
+   
+    margin: 100px;
+    margin-right: -9px;
+    text-align: center;
+    font-size: x-large;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    align-items: center;
+   
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    border-radius: 20px;
+    /* display: block; */
+    align-self: center;
+    width: 600px;
+    height: 40px;
+}
+label{
+    display: block;
+    padding: 10px;
+}
+textarea{
+    width: 600px;
+    border-radius: 20px;
+    height: 60px;
+}
+.field{
+    /* border: 2px solid wheat; */
+    margin: 10px ;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit{
+    background-color: #FF5722;
+    font-size: larger;
+    padding: 10px;
+    height: 50px;
+    width: 300px;
+}
 @media (max-width:560px) {
     .profile-img{
         min-width: 99%;
@@ -142,16 +279,21 @@
     
 }
 
-@media (max-width:1064px) and (min-width:560px){
+@media (max-width:1350px) and (min-width:560px){
     .banner{
         flex-direction: column;
         justify-content: space-around;
-        border-top-left-radius: 43%;
-        border-top-right-radius: 43%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        background-color: #222831;
     }
     .profile-img{
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
+    }
+    .intro{
+        margin-right: 0px;
+        text-align: center;
     }
 
 
