@@ -237,36 +237,59 @@ form{
     flex-direction: column;
     align-items: center;
 }
+
+
+.field{
+    width: 60%;
+    /* border: 2px solid wheat; */
+    margin: 10px ;
+    padding: 10px;
+    align-items:start;
+    justify-content:right;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
+textarea{
+    min-width: 50%;
+    max-width: 70%;
+    width: 600px;
+    border-radius: 20px;
+    height: 60px;
+    flex-grow: 1;
+}
+
 input{
     border-radius: 20px;
+    min-width: 50%;
+    max-width: 70%;
     /* display: block; */
+    /* flex-shrink: 1; */
+    display: block;
+    flex-grow: 1;
     align-self: center;
-    width: 600px;
+    
     height: 40px;
 }
 label{
     display: block;
     padding: 10px;
-}
-textarea{
-    width: 600px;
-    border-radius: 20px;
-    height: 60px;
-}
-.field{
-    /* border: 2px solid wheat; */
-    margin: 10px ;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
+    width: 130px;
+    text-align: center;
 }
 
 .submit{
+    margin: 20px;
+    margin-right: 120px;
     background-color: #FF5722;
+    color: #EEEEEE;
     font-size: larger;
-    padding: 10px;
-    height: 50px;
-    width: 300px;
+    font-weight: 600;
+    padding: 15px;
+    flex-grow: 0;
+    height: 60px;
+    width: 150px;
 }
 @media (max-width:560px) {
     .profile-img{
